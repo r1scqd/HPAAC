@@ -6,7 +6,7 @@ from typing import Optional
 from sqlalchemy import ForeignKey, Table, Column
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from src.db.base import Base
+from .base import Base
 
 # many to many refs
 access_education_material_table = Table(

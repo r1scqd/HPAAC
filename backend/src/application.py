@@ -5,7 +5,6 @@ from flask_restful import Api
 from loguru import logger
 
 from .container import AppContainer, get_inject_modules
-from .db.models import TariffModel
 from .resources.tariff import TariffResource, TariffsResource
 from .resources.user import UserResource
 
@@ -25,6 +24,6 @@ def create_app() -> Flask:
     api = Api(app, '/api')
 
     api.add_resource(UserResource, '/user/<int:user_id>', '/user')
-    api.add_resource(TariffResource, '/tariff/<int:tariff_id>', '/tariff')
+    api.add_resource(TariffResource, '/tariff/<int:id>', '/tariff')
     api.add_resource(TariffsResource, '/tariffs')
     return app
