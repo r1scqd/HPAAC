@@ -44,7 +44,7 @@ a {
     column-gap: 20px;
 }
 
-li:hover {
+.nav li:hover {
     text-decoration: underline;
 }
 
@@ -84,7 +84,7 @@ button:hover {
     overflow: hidden;
     width: 100%;
     height: 800px;
-    margin: 0 auto;
+    margin: 0 auto 100px;
 }
 
 .blck {
@@ -211,7 +211,7 @@ possibilities__main__img {
 }
 
 .tariff__cart {
-    background: blue;
+    background: #009CFF;
     width: 300px;
     height: 450px;
 }
@@ -280,3 +280,61 @@ body.modal-open {
     cursor: pointer;
 }
 
+.possibilities__main__text_header{
+    color: #fff;
+    padding: 15px;
+}
+
+.possibilities__main__text_header h3{
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.possibilities__main__text_header li{
+    margin-bottom: 10px;
+}
+
+.possibilities__main__text{
+    color: #fff;
+    padding: 15px;
+
+}
+
+.possibilities__main__text li{
+    margin-bottom: 10px;
+}
+
+.tariff{
+    color: #fff;
+}
+
+.tariff__header {
+
+
+}
+
+.tariff__carts {
+}
+
+.tariff__cart {
+    padding: 20px;
+}
+
+.tariff__cart__header {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tariff__text {
+    text-align: start;
+    min-height: 300px;
+}
+
+.tariff__text li {
+    margin-bottom: 10px;
+
+}
+
+.tariff__price {
+}

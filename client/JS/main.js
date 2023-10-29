@@ -57,8 +57,10 @@ btn1.addEventListener('click', (e) => {
 
         .then(response => response.json())
         .then(data=>{
-            if (data) {
-                const jsonString = JSON.stringify(data)
+            const jsonString = JSON.stringify(data)
+            console.log(data)
+            if (data.first_name) {
+
                 localStorage.setItem('user', jsonString)
                 setTimeout(() => {
                     location.assign('./pc/index.html')
