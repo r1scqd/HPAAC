@@ -54,7 +54,7 @@ btn1.addEventListener('click', (e) => {
             password:password
         })
     })
-    
+
         .then(response => response.json())
         .then(data=>{
             if (data) {
