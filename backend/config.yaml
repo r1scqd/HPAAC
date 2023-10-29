@@ -1,2 +1,4 @@
+flask:
+  port: 80
 db:
   url: 'sqlite:///database.db'

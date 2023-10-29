@@ -5,10 +5,12 @@ from flask_restful import Api
 from loguru import logger
 
 from .container import AppContainer, get_inject_modules
+from .db.models import TestSessionModel
 from .resources.organization import OrganizationResource, OrganizationsResource
 from .resources.tariff import TariffResource, TariffsResource
+from .resources.test_session import TestSessionResource, TestsSessionResource
 from .resources.tests import TestResource, TestsResource, VrResource, VrsResource
-from .resources.user import UserResource, UsersResource
+from .resources.user import UserResource, UsersResource, UserSignin
 
 
 def create_app() -> Flask:
@@ -38,4 +40,9 @@ def create_app() -> Flask:
 
     api.add_resource(OrganizationResource, '/organization/<int:id>', '/organization')
     api.add_resource(OrganizationsResource, '/organizations')
+
+    api.add_resource(TestSessionResource, '/testsession/<int:id>', '/testsession')
+    api.add_resource(TestsSessionResource, '/testsessions')
+
+    api.add_resource(UserSignin, '/signin')
     return app

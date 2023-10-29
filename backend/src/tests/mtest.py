@@ -4,12 +4,13 @@ from pprint import pprint
 
 import requests
 
-base_url = "http://127.0.0.1:8080/api"
+base_url = "https://7669-188-186-201-27.ngrok-free.app"
 
 
 class BaseTest(unittest.TestCase):
     def test_get(self):
         res = requests.get(f'{base_url}/test/5')
+        print(res.content)
         pprint(json.loads(res.content))
 
     def test_post(self):
