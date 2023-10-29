@@ -1,6 +1,7 @@
 """Application module."""
 
 from flask import Flask
+from flask_cors import CORS
 from flask_restful import Api
 from loguru import logger
 
@@ -25,6 +26,7 @@ def create_app() -> Flask:
     app = Flask(__name__)
     app.container = container
 
+    cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
     api = Api(app, '/api')
 
     api.add_resource(UserResource, '/user/<int:id>', '/user')
