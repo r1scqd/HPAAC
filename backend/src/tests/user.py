@@ -3,8 +3,9 @@ import pprint
 import unittest
 
 import requests
+from werkzeug.security import generate_password_hash
 
-base_url = "http://127.0.0.1:8080/api"
+base_url = "https://7669-188-186-201-27.ngrok-free.app/api"
 
 
 class BaseTest(unittest.TestCase):
@@ -14,6 +15,7 @@ class BaseTest(unittest.TestCase):
         pprint.pprint(res.text)
 
     def test_post(self):
+        print(generate_password_hash('12345'))
         res = requests.post(f'{base_url}/user',
                             json={
                                 'first_name': 'sname',
@@ -23,8 +25,8 @@ class BaseTest(unittest.TestCase):
                                 'status': 'work',
                                 'job_title': 'krytoi',
                                 'role': 'worker',
-                                'login': 'alepa',
-                                'password': 'qq',
+                                'login': 'hello',
+                                'password': '12345',
                             })
         print(res.status_code)
         print(res.content)
